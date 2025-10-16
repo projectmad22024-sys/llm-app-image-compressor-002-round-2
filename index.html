@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Image Compressor CLI</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h1 { font-size: 1.5em; }
+#log { white-space: pre-wrap; background: #f0f0f0; padding: 10px; height: 300px; overflow-y: scroll; border: 1px solid #ccc; }
+button { margin-top: 10px; padding: 10px 20px; }
+</style>
+</head>
+<body>
+<h1>Image Compressor CLI</h1>
+<p>Select a folder of PNG or JPG images to compress (lossless or lossy modes supported).</p>
+<input type="file" id="folderInput" webkitdirectory directory multiple />
+<br/>
+<label>
+  Compression Mode:
+  <select id="modeSelect">
+    <option value="lossless">Lossless</option>
+    <option value="lossy">Lossy (≥85% quality)</option>
+  </select>
+</label>
+<br/>
+<button id="startBtn">Start Compression</button>
+<h2>Process Log</h2>
+<div id="log"></div>
+<script src="script.js"></script>
+</body>
+</html>
